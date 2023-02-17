@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href={{ url_for('static', filename='style.css') }}>
+        <script type="text/javascript"src="//code.typesquare.com/static/ZDbTe4IzCko%253D/ts106f.js"charset="utf-8"></script>
+        <title>入出金明細照会</title>
+      </head>
+    <body>
+        <script>
+        d3.select("body").style("background-color", "blue");
+
+        </script>
+        <h1>入出金明細照会</h1>
+        <div class="leftimage">
+
+        　</div>
+        <a href="{{ url_for('home') }}">残高照会</a>
+        <a href="{{ url_for('index') }}">口座一覧照会</a>
+        <a href="{{ url_for('second') }}">入出金明細照会</a>
+        <a href="{{ url_for('third') }}">振込依頼</a>
+        <a href="{{ url_for('forth') }}">お客様通知</a>
+        <a href="{{ url_for('five') }}">MicorosoftTeams通知</a>
+        <a href="{{ url_for('chart') }}">グラフ</a>
+        <div class="container">
+        <div id="json" class="json"> "入出金明細照会" {{ data }}</div>
+        <form method="GET" action="/nyushitsu">
+          <button type="submit" class="btn">入出金明細照会</button>
+        </div>
+        <style>
+          * {
+            box-sizing: border-box;
+          }
+           
+          body {
+            background: linear-gradient(to right top, #00ffff 0%, #7f00ff 50%, #ff00ff 100%);
+            font-family:"ヒラギノ角ゴ Pro W3";
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+            margin: 0;
+            padding: 20px;
+          }
+          
+          .leftimage{
+            width: 100%;
+            height: 300px;
+          }
+          .container {
+            background-color: #145503;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+            padding: 50px 20px;
+            text-align: center;
+            max-width: 100%;
+            width: 800px;
+          }
+           
+          h1 {
+            font-size: 150px;
+            margin: 0;
+            opacity: 0.5;
+            letter-spacing: 2px;
+          }
+           
+          .json {
+            font-size: 20px;
+            letter-spacing: 1px;
+            line-height: 40px;
+            margin: 50px auto;
+            max-width: 600px;
+          }
+           
+          .btn {
+            background-color: #9f68e0;
+            color: #fff;
+            border: 0;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+            padding: 14px 40px;
+            font-size: 16px;
+            cursor: pointer;
+          }
+           
+          .btn:active {
+            transform: scale(0.98);
+          }
+           
+          .btn:focus {
+            outline: 0;
+                </style>
+</body>
+</html>
